@@ -1,4 +1,4 @@
 server-tools
-connector
+connector https://github.com/akretion/connector 9.0-backport-component
 web
 pos
