@@ -109,7 +109,7 @@ class StorageImage(models.Model):
             ('size_y', '=', size_y),
             ('res_id', '=', self.id),
             ('res_model', '=', self._name),
-            ])
+            ], limit=1)
         if not thumbnail and self.datas:
             thumbnail = self.env['storage.thumbnail']._create_thumbnail(
                 self, size_x, size_y)
