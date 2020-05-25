@@ -5,9 +5,9 @@
 
 import os
 
-from odoo import _
-from odoo.addons.component.core import Component
-from odoo.exceptions import AccessError
+from openerp import _
+from openerp.addons.component.core import Component
+from openerp.exceptions import AccessError
 
 
 def is_safe_path(basedir, path):

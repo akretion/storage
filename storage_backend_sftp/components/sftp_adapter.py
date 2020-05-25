@@ -8,7 +8,7 @@ import logging
 import os
 from contextlib import contextmanager
 
-from odoo.addons.component.core import Component
+from openerp.addons.component.core import Component
 from StringIO import StringIO
 
 logger = logging.getLogger(__name__)

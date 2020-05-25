@@ -7,8 +7,8 @@
 import logging
 
 import requests
-from odoo import api, fields, models
-from odoo.tools import image_resize_image
+from openerp import api, fields, models
+from openerp.tools import image_resize_image
 
 _logger = logging.getLogger(__name__)
 

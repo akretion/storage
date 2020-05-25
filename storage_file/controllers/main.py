@@ -5,9 +5,9 @@ import base64
 
 import werkzeug.utils
 import werkzeug.wrappers
-from odoo import http
-from odoo.addons.web.controllers.main import binary_content
-from odoo.http import request
+from openerp import http
+from openerp.addons.web.controllers.main import binary_content
+from openerp.http import request
 
 
 class StorageFileController(http.Controller):

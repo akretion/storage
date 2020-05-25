@@ -5,7 +5,7 @@
 
 import logging
 
-from odoo.addons.component.core import Component
+from openerp.addons.component.core import Component
 
 logger = logging.getLogger(__name__)
 

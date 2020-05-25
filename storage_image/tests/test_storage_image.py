@@ -8,8 +8,8 @@ import os
 
 import requests_mock
 import urlparse
-from odoo.addons.component.tests.common import TransactionComponentCase
-from odoo.exceptions import AccessError
+from openerp.addons.component.tests.common import TransactionComponentCase
+from openerp.exceptions import AccessError
 
 
 class StorageImageCase(TransactionComponentCase):

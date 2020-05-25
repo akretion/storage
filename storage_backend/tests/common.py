@@ -5,7 +5,7 @@
 
 import base64
 
-from odoo.addons.component.tests.common import TransactionComponentCase
+from openerp.addons.component.tests.common import TransactionComponentCase
 
 
 class GenericStoreCase(object):

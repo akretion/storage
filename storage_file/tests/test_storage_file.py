@@ -6,8 +6,8 @@
 import base64
 
 import urlparse
-from odoo.addons.component.tests.common import TransactionComponentCase
-from odoo.exceptions import AccessError, UserError
+from openerp.addons.component.tests.common import TransactionComponentCase
+from openerp.exceptions import AccessError, UserError
 
 
 class StorageFileCase(TransactionComponentCase):

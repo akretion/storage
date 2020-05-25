@@ -5,7 +5,7 @@
 
 import os
 
-from odoo.addons.component.core import AbstractComponent
+from openerp.addons.component.core import AbstractComponent
 
 
 class BaseStorageAdapter(AbstractComponent):

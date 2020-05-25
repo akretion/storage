@@ -6,7 +6,7 @@
 import base64
 import os
 
-from odoo.addons.component.tests.common import SavepointComponentCase
+from openerp.addons.component.tests.common import SavepointComponentCase
 
 
 class ProductImageCommonCase(SavepointComponentCase):

@@ -10,7 +10,7 @@
 import logging
 import os
 
-from odoo.addons.storage_backend.tests.common import Common, GenericStoreCase
+from openerp.addons.storage_backend.tests.common import Common, GenericStoreCase
 from vcr_unittest import VCRMixin
 
 _logger = logging.getLogger(__name__)

@@ -10,10 +10,10 @@ import mimetypes
 import os
 import re
 
-from odoo import api, fields, models
-from odoo.exceptions import UserError
-from odoo.tools import human_size
-from odoo.tools.translate import _
+from openerp import api, fields, models
+from openerp.exceptions import UserError
+from openerp.tools import human_size
+from openerp.tools.translate import _
 
 _logger = logging.getLogger(__name__)
 
