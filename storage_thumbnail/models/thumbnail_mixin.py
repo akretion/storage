@@ -35,8 +35,7 @@ class ThumbnailMixing(models.AbstractModel):
 
     def get_or_create_thumbnail(self, size_x, size_y, url_key=None):
         self.ensure_one()
-        # preserve the prefetch when changing context
-        self = self.with_context(bin_size=False).with_prefetch(self._prefetch)
+        self = self.with_context(bin_size=False)
         if url_key:
             url_key = slugify(url_key)
         thumbnail = self.env["storage.thumbnail"].browse()
