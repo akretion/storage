@@ -80,8 +80,12 @@ class StorageThumbnail(models.Model):
         vals.update(
             {"backend_id": self._get_backend_id(), "file_type": "thumbnail"}
         )
-        return super(StorageThumbnail, self).create(vals)
+        data = vals.pop("data")
+        record = super(StorageThumbnail, self).create(vals)
+        record.file_id.write({"data": data})
+        return record
 
+    @api.multi
     def unlink(self):
         files = self.mapped("file_id")
         result = super(StorageThumbnail, self).unlink()

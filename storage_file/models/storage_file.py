@@ -151,7 +151,9 @@ class StorageFile(models.Model):
     )
     def _compute_url(self):
         for record in self:
-            if record.backend_id.served_by == "odoo":
+            if not record.relative_path:
+                record.url = None
+            elif record.backend_id.served_by == "odoo":
                 base_url = (
                     self.env["ir.config_parameter"]
                     .sudo()
