@@ -1,14 +1,14 @@
-# -*- coding: utf-8 -*-
 # Copyright 2017 Akretion (http://www.akretion.com).
 # @author Sébastien BEAU <sebastien.beau@akretion.com>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 import os
-
-from openerp import _
-from openerp.addons.component.core import Component
-from openerp.exceptions import AccessError
 import urllib
+
+from odoo import _
+from odoo.exceptions import UserError
+
+from odoo.addons.component.core import Component
 
 
 def is_safe_path(basedir, path):
@@ -16,7 +16,7 @@ def is_safe_path(basedir, path):
 
 
 class HttpStorageBackend(Component):
-    _name = "filesystem.adapter"
+    _name = "http.adapter"
     _inherit = "base.storage.adapter"
     _usage = "http"
 
