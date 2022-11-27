@@ -6,3 +6,4 @@ python-magic
 python_slugify
 unicodecsv
 validators
+webdav4[fsspec]
