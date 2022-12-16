@@ -40,13 +40,15 @@ class WebdavBackendAdapter(Component):
     def get(self, relative_path, **kwargs):
         kwargs = self._get_client_params()
         full_path = self._fullpath(relative_path)
-        with fsspec.open(f"webdav://{full_path}", mode="r", **kwargs) as f:
+        with fsspec.open(f"webdav://{full_path}", mode="rb", **kwargs) as f:
             return f.read()
 
     def list(self, relative_path):
         client = self._get_client()
         full_path = self._fullpath(relative_path)
-        return client.ls(full_path, detail=False)
+        return [
+            x.replace(f"{full_path}/", "") for x in client.ls(full_path, detail=False)
+        ]
 
     def move_files(self, files, destination_path):
         _logger.debug("mv %s %s", files, destination_path)
