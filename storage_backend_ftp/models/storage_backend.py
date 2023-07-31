@@ -53,3 +53,6 @@ class StorageBackend(models.Model):
             }
         )
         return env_fields
+
+    def _set_ftp_custom_option(self, client):
+        return client

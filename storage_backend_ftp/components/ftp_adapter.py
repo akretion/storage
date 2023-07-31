@@ -88,6 +88,7 @@ def ftp(backend):
                 client.prot_p()
             if backend.ftp_passive:
                 client.set_pasv(True)
+            client = backend._set_ftp_custom_option(client)
             yield client
 
 
