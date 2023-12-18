@@ -19,4 +19,5 @@
     ],
     "demo": ["demo/fs_storage.xml"],
     "external_dependencies": {"python": ["fsspec"]},
+    "pre_init_hook": "pre_init_hook",
 }
