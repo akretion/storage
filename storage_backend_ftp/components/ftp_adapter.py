@@ -103,6 +103,7 @@ class FTPStorageBackendAdapter(Component):
             if dirname:
                 try:
                     client.cwd(dirname)
+                    client.cwd("..")
                 except IOError as e:
                     if e.errno == errno.ENOENT:
                         ftp_mkdirs(client, dirname)
